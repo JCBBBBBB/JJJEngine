@@ -49,9 +49,6 @@
     <ClInclude Include="Core.h">
       <Filter>소스 파일\Main</Filter>
     </ClInclude>
-    <ClInclude Include="JJJEngine.h">
-      <Filter>소스 파일\Main</Filter>
-    </ClInclude>
     <ClInclude Include="Defines.h">
       <Filter>소스 파일\Headers</Filter>
     </ClInclude>
@@ -63,6 +60,9 @@
     </ClInclude>
     <ClInclude Include="TimeManager.h">
       <Filter>소스 파일\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="JJJEngine.h">
+      <Filter>소스 파일\Headers\Other</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
