@@ -1,6 +1,8 @@
 #pragma once
 
-
+#include "Defines.h"
+#include "Enums.h"
+#include "Structs.h"
 
 #include <windows.h>
 #include <vector>

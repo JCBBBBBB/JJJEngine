@@ -1,5 +1,4 @@
 #pragma once
-#include "Defines.h"
 #include "pch.h"
 
 
@@ -37,7 +36,6 @@ class InputManager
 public:
 	void Init();
 	void Update();
-	void Render();
 	
 	bool GetKey(KeyType keytype);
 	bool GetKeyDown(KeyType keytype);

@@ -1,8 +1,6 @@
 #pragma once
 #include "pch.h"
-#include "GameObject.h"
-#include "InputManager.h"
-#include "TimeManager.h"
+
 
 
 class Core
@@ -16,10 +14,13 @@ class Core
 		void Render();
 
 	private:
+		RECT m_rect;
 		HWND m_hwnd;
 		HDC m_hdc;
 
-		GameObject m_player;
+		HDC m_backHdc;
+		HBITMAP m_backBmp;
+		
 };
 
 

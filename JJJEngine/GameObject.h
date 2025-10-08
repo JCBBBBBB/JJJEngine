@@ -1,18 +1,35 @@
 #pragma once
 #include "pch.h"
 
-
 class GameObject
 {
-	public:
-		GameObject();
-		~GameObject();
+public:
+	GameObject(GameObjectType type);
+	virtual ~GameObject();
 
-		void Init();
-		void Update();
-		void Render(HDC hdc);
+	virtual void Init() abstract;
+	virtual void Update() abstract;
+	virtual void Render(HDC hdc) abstract;
 
-	private:
-		float m_x, m_y;
+	GameObjectType GetGameObjectType() const
+	{
+		return m_type;
+	}
+
+	void SetPos(Pos pos)
+	{
+		m_pos.x = pos.x;
+		m_pos.y = pos.y;
+	}
+
+	Pos GetPos() const
+	{
+		return m_pos;
+	}
+
+protected:
+	GameObjectType m_type = GameObjectType::None;
+	Stat m_stat = {};
+	Pos m_pos = {};
 };
 

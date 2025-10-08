@@ -1,5 +1,4 @@
 #pragma once
-#include "Defines.h"
 #include "pch.h"
 
 class TimeManager
@@ -9,10 +8,11 @@ class TimeManager
 public:
 	void Init();
 	void Update();
-	float GetDeltaTime() { return _deltaTime; }
+	void Render(HDC hdc);
+	float GetDeltaTime() { return m_deltaTime; }
 private:
-	float _deltaTime = 0.0f;
-	UINT64 _frequency = 0;
-	UINT64 _prevCount = 0;
+	float m_deltaTime = 0.0f;
+	UINT64 m_frequency = 0;
+	UINT64 m_prevCount = 0;
 };
 

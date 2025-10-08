@@ -57,10 +57,6 @@ void InputManager::Update()
 }
 
 
-void InputManager::Render()
-{
-
-}
 
 bool InputManager::GetKey(KeyType keytype)
 {
