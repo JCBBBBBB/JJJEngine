@@ -10,14 +10,11 @@ class GameObjectManager
 public:
 	~GameObjectManager();
 
-	void Add(GameObject* gameObject);
-	void Remove(GameObject* gameObject);
+	void Add(GameObject* gameObject); // 게임오브젝트 추가
+	void Remove(GameObject* gameObject); // 게임오브젝트 제거
 	void Clear();
 
-	const std::vector<GameObject*>& GetObjects()
-	{
-		return m_gameObjects;
-	}
+	const std::vector<GameObject*>& GetObjects(); // 게임오브젝트들이 있는 벡터 가져온다
 
 	template <typename T>
 	T* CreateGameObjects()

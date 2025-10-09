@@ -18,3 +18,7 @@
 #include <basetsd.h>
 
 #include <assert.h>
+
+#include <format>
+#include <filesystem>
+namespace fs = std::filesystem;

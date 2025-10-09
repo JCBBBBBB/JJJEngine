@@ -1,6 +1,7 @@
 #include "SceneManager.h"
 #include "GameObjectManager.h"
 #include "PlayScene.h"
+#include "EditScene.h"
 
 void SceneManager::Init()
 {
@@ -23,18 +24,6 @@ void SceneManager::Render(HDC hdc)
 	}
 }
 
-GameObjectManager::~GameObjectManager()
-{
-}
-
-void GameObjectManager::Add(GameObject* gameObject)
-{
-}
-
-void GameObjectManager::Remove(GameObject* gameObject)
-{
-}
-
 void SceneManager::Clear()
 {
 	if (m_currentScene)
@@ -44,9 +33,9 @@ void SceneManager::Clear()
 	}
 }
 
-void SceneManager::ChangeScene(SceneType sceneType)
+void SceneManager::ChangeScene(SceneType sceneType) // 바꾸려는 씬 종류
 {
-	if (m_sceneType == sceneType)
+	if (m_sceneType == sceneType) // 현재 씬 종류가 바꾸려는 씬 종류와 같다면
 	{
 		return;
 	}
@@ -57,6 +46,10 @@ void SceneManager::ChangeScene(SceneType sceneType)
 	{
 		case SceneType::PlayScene:
 			newScene = new PlayScene();
+			break;
+
+		case SceneType::EditScene:
+			newScene = new EditScene();
 			break;
 	}
 

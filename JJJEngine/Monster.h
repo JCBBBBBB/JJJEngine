@@ -2,17 +2,15 @@
 #include "pch.h"
 #include "GameObject.h"
 
-
-class Player : public GameObject
+class Monster : public GameObject
 {
 public:
-	Player();
-	virtual ~Player() override;
+	Monster();
+	virtual ~Monster() override;
 
 	virtual void Init() override;
 	virtual void Update() override;
 	virtual void Render(HDC hdc) override;
-
 
 private:
 

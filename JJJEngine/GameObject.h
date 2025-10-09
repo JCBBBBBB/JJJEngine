@@ -11,21 +11,10 @@ public:
 	virtual void Update() abstract;
 	virtual void Render(HDC hdc) abstract;
 
-	GameObjectType GetGameObjectType() const
-	{
-		return m_type;
-	}
+	GameObjectType GetGameObjectType();
 
-	void SetPos(Pos pos)
-	{
-		m_pos.x = pos.x;
-		m_pos.y = pos.y;
-	}
-
-	Pos GetPos() const
-	{
-		return m_pos;
-	}
+	void SetPos(Pos pos);
+	Pos GetPos();
 
 protected:
 	GameObjectType m_type = GameObjectType::None;

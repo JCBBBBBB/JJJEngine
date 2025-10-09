@@ -2,6 +2,7 @@
 #include "InputManager.h"
 #include "TimeManager.h"
 #include "SceneManager.h"
+#include "ResourceManager.h"
 
 Core::Core()
 {
@@ -26,10 +27,11 @@ void Core::Init(HWND hwnd)
 	DeleteObject(prevBmp);
 
 	TimeManager::GetInstance()->Init();
-	InputManager::GetInstance()->Init();
+	InputManager::GetInstance()->Init(m_hwnd);
 	SceneManager::GetInstance()->Init();
+	ResourceManager::GetInstance()->Init(m_hwnd, fs::path(L"");
 
-	SceneManager::GetInstance()->ChangeScene(SceneType::PlayScene);
+	SceneManager::GetInstance()->ChangeScene(SceneType::EditScene);
 }
 
 void Core::Update()

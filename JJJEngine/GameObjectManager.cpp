@@ -28,7 +28,7 @@ void GameObjectManager::Remove(GameObject* gameObject)
 	{
 		return;
 	}
-
+	// 게임오브젝트 그룹에서 지울 게임오브젝트 반복자 위치 찾는다.
 	auto iter = std::remove(m_gameObjects.begin(), m_gameObjects.end(), gameObject);
 
 	m_gameObjects.erase(iter, m_gameObjects.end());
@@ -41,8 +41,13 @@ void GameObjectManager::Clear()
 	for (GameObject* gameObject : m_gameObjects)
 	{
 		delete gameObject;
+		gameObject = nullptr;
 	}
 
 	m_gameObjects.clear();
 }
 
+const std::vector<GameObject*>& GameObjectManager::GetObjects()
+{
+	return m_gameObjects;
+}

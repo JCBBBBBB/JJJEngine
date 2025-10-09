@@ -17,7 +17,7 @@ public:
 
 
 private:
-	Scene* m_currentScene;
+	Scene* m_currentScene = nullptr;
 	SceneType m_sceneType = SceneType::None;
 };
 

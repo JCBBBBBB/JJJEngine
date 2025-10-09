@@ -1,5 +1,5 @@
 #pragma once
-#include "Windows.h"
+#include <Windows.h>
 
 struct Stat
 {
@@ -12,4 +12,11 @@ struct Pos
 {
 	float x = 0;
 	float y = 0;
+};
+
+struct Key
+{
+	KeyType keyType;
+	KeyState keyState;
+	bool isPressed;
 };
